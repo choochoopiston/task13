@@ -1,0 +1,35 @@
+<%= form_for @inquiry, :url => inquiries_confirm_path do |f| %>
+
+<% if @inquiry.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      <strong></strong>入力内容に <%= @inquiry.errors.count %>個のエラーがあります。</strong>
+    </div>
+    <ol>
+    <% @inquiry.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ol>
+  </div>
+<% end %>
+
+
+<h1>お問い合わせ</h1>
+
+<table class="table">
+  <tr>
+    <th><%= f.label :名前（必須） %></th>
+    <td><%= f.text_field :name, :size => "30x1" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :メールアドレス（必須） %></th>
+    <td><%= f.text_field :email, :size => "30x1" %></td>
+  </tr>
+  <tr>
+    <th><%= f.label :お問い合わせ内容 %></th>
+    <td><%= f.text_area :content, :size => "60x6" %></td>
+  </tr>
+ 
+</table>
+<%= f.submit 'お問い合わせ送信', :class => 'btn btn-primary' %>
+<% end %>
