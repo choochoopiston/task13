@@ -1,20 +1,6 @@
 <%= form_for @inquiry, :url => inquiries_confirm_path do |f| %>
 
-<% if @inquiry.errors.any? %>
-  <div id="error_explanation">
-    <div>
-      <strong></strong>入力内容に <%= @inquiry.errors.count %>個のエラーがあります。</strong>
-    </div>
-    <ol>
-    <% @inquiry.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ol>
-  </div>
-<% end %>
-
-
-<h2>お問い合わせ</h2>
+<h1>お問い合わせ</h1>
 
 <table>
   <tr>
@@ -31,5 +17,20 @@
   </tr>
  
 </table>
-<%= f.submit 'お問い合わせ送信', :class => 'btn btn-primary' %>
+<br>
+<% if @inquiry.errors.any? %>
+  <div id="error_explanation">
+    <div>
+      <strong></strong>入力内容に <%= @inquiry.errors.count %>個のエラーがあります。</strong>
+    </div>
+    <ol>
+    <% @inquiry.errors.each do |attribute, msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ol>
+  </div>
+<% end %>
+<center>
+<%= f.submit 'お問い合わせ送信' %>
+</center>
 <% end %>
