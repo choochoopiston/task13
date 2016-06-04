@@ -1,6 +1,6 @@
 <%= form_for @inquiry, :url => inquiries_thanks_path do |f| %>
 
-<h2>お問い合わせ - 再度内容をご確認ください</h2>
+<h1>お問い合わせ(再度内容をご確認ください)</h1>
 
 <table>
   <tr>
@@ -26,6 +26,7 @@
   </tr>
 </table>
 
+<center>
 <%= f.submit "この内容で登録する" %>
 
 <% end %>
@@ -39,3 +40,4 @@
 <%= f.submit "やっぱり内容を修正する", name: 'back' %>
 
 <% end %>
+</center>
