@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   root to: "top#index"
 
   resources :blogs
+  
+  get "inquiries", to: "inquiries#index"
+  post 'inquiries', to: 'inquiries#index'
+  post 'inquiries/confirm', to: 'inquiries#confirm'
+  post 'inquiries/thanks', to: 'inquiries#thanks'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
