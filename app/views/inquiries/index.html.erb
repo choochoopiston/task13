@@ -14,9 +14,9 @@
 <% end %>
 
 
-<h1>お問い合わせ</h1>
+<h2>お問い合わせ</h2>
 
-<table class="table">
+<table>
   <tr>
     <th><%= f.label :名前（必須） %></th>
     <td><%= f.text_field :name, :size => "30x1" %></td>
@@ -31,5 +31,5 @@
   </tr>
  
 </table>
-<%= f.submit 'お問い合わせ送信', :class => 'btn btn-primary' %>
+<%= f.submit 'お問い合わせ送信' %>
 <% end %>

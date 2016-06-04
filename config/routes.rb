@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :blogs
   
   get "inquiries", to: "inquiries#index"
-  post 'inquiries', to: 'inquiry#index'
+  post 'inquiries', to: 'inquiries#index'
   post 'inquiries/confirm', to: 'inquiries#confirm'
   post 'inquiries/thanks', to: 'inquiries#thanks'
   
