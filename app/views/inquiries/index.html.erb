@@ -2,7 +2,7 @@
 
 <% if @inquiry.errors.any? %>
   <div id="error_explanation">
-    <div class="alert alert-error">
+    <div>
       <strong></strong>入力内容に <%= @inquiry.errors.count %>個のエラーがあります。</strong>
     </div>
     <ol>
@@ -31,5 +31,5 @@
   </tr>
  
 </table>
-<%= f.submit 'お問い合わせ送信' %>
+<%= f.submit 'お問い合わせ送信', :class => 'btn btn-primary' %>
 <% end %>
