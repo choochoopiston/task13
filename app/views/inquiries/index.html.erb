@@ -6,7 +6,7 @@
       <strong></strong>入力内容に <%= @inquiry.errors.count %>個のエラーがあります。</strong>
     </div>
     <ol>
-    <% @inquiry.errors.full_messages.each do |msg| %>
+    <% @inquiry.errors.each do |attribute, msg| %>
       <li><%= msg %></li>
     <% end %>
     </ol>
